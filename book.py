@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import numpy as np
 
 class Book:
     def __init__(self, title, author, genre, amount):
