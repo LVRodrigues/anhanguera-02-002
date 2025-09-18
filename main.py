@@ -7,7 +7,7 @@ def menu() -> int:
     print('1 - Cadastrar livro')
     print('2 - Listar livros')
     print('3 - Localizar livro')
-    print('4 - Grafico de quantidade por gênero')
+    print('4 - Gráfico de quantidade por gênero')
     print('0 - Sair')
     try:
         option = int(input('Informe a opção: '))

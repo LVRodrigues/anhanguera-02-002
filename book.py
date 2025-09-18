@@ -34,19 +34,19 @@ def add():
     print('Livro cadastrado')
 
 def _show(books): 
-    books.sort(key=lambda b: b.titulo)
+    books.sort(key=lambda b: b.title)
     print('')
     print('"Título","Autor","Gênero",Quantidade')
     for book in books:
-        print(f'"{book.titulo}","{book.autor}","{book.genero}",{book.quantidade}')
+        print(f'"{book.title}","{book.author}","{book.genre}",{book.amount}')
 
 def show():
     _show(books)
 
 def locate():
     print('')
-    titulo = input('Informe o título para localizar:')
-    filtered = list(filter(lambda b: titulo.lower() in b.titulo.lower(), books))
+    title = input('Informe o título para localizar: ')
+    filtered = list(filter(lambda b: title.lower() in b.title.lower(), books))
     if len(filtered) == 0:
         print('Nenhum livro encontrado...')
     else:
