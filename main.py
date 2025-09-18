@@ -27,7 +27,7 @@ def main() -> int:
             case 3:
                 book.locate()
             case 4:
-                print('Graficando...')
+                book.graphic()
             case 0:
                 break
     return 0

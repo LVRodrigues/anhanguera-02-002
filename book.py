@@ -1,9 +1,12 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
 class Book:
-    def __init__(self, titulo, autor, genero, quantidade):
-        self.titulo = titulo
-        self.autor = autor
-        self.genero = genero
-        self.quantidade = quantidade
+    def __init__(self, title, author, genre, amount):
+        self.title = title
+        self.author = author
+        self.genre = genre
+        self.amount = amount
 
 books = []
 
@@ -50,4 +53,18 @@ def locate():
     else:
         _show(filtered)
     
-    
+def graphic():
+    print('')
+    print('Preparando o gráfico...')
+    series = {}
+    for book in books:
+        if book.genre in series:
+            series[book.genre] += book.amount
+        else:
+            series[book.genre] = book.amount
+    print(series)
+    plt.bar(series.keys(), series.values())
+    plt.xlabel('Gênero')
+    plt.ylabel('Quantidade')
+    plt.title('Quantidade de Livros por Gênero')
+    plt.show()
